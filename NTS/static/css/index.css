@@ -1,0 +1,108 @@
+body, ul, button, li   {
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+body    {
+    padding: 16px;
+    height: 100%;
+}
+
+ul  {
+    list-style: none;
+    text-align: center;
+}
+
+ul li{
+    display: inline-block;
+}
+
+button  {
+    padding: 14px 24px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.active {
+    color: blue;
+    background-color: aliceblue;
+    border-color: blue;
+}
+
+#ntsContent, #stnContent {
+    display: grid;
+    grid-gap: 0;
+    grid-column-gap: 32px;
+    padding: 32px;
+    justify-content: center;
+}
+
+#text_instruction    {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: left;
+}
+
+#video_output    {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px 1px grey;
+    border-radius: 0 0 3px 3px;
+    display: grid;
+    justify-content: center;
+    width: -moz-fit-content;
+}
+
+#text_out    {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: left;
+
+    border-top: 1px solid gray;
+    margin-top: 16px;
+}
+
+#nts_video, #stn_video  {
+}
+
+#mic-icon, #recordIcon {
+    height: 56px;
+    width: 56px;
+    cursor: pointer;
+    color: blue;
+    justify-self: center;
+    margin: 16px;
+    border-radius: 100px;
+    box-sizing: border-box;
+    padding: 4px;
+    border-width: 2px;
+    border-color: dimgray;
+}
+
+#mic-icon:hover {
+    border: none;
+    box-shadow: 2px 2px 2px 2px dimgray;
+}
+
+#video_output_stream    {
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px 1px grey;
+    border-radius: 0 0 3px 3px;
+    display: grid;
+    justify-content: center;
+    width: fit-content;
+}
+
+#text_out_stream    {
+    border-top: 1px solid gray;
+    margin-top: 16px;
+}

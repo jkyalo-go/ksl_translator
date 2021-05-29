@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
+</head>
+<body>
+<ul>
+    <li><button id="nts" onclick="switchTranslation(0)">Natural Language</button></li>
+    <li><button id="stn" onclick="switchTranslation(1)">Sign Language</button></li>
+</ul>
+<div id="ntsContent">
+    <div id="text_instruction">
+        <h1>Hello, <br>do a translation <br>from natural language to sign language here.</h1>
+    </div>
+    <div id="video_output">
+        <video id="nts_video" width="400" height="300" autoplay controls>
+          <source id="video_source" src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <i id="mic-icon" onclick="startRecognition()" class="fa fa-microphone-alt"></i>
+    </div>
+    <div id="text_out"></div>
+</div>
+<div id="stnContent">
+    <div id="video_output_stream">
+        <video id="stn_video" width="400" height="300" autoplay controls>
+          <source id="video_source_stream" src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <i id="recordIcon" class="fa fa-record-vinyl"></i>
+    </div>
+
+    <div id="text_out_stream"></div>
+</div>
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
